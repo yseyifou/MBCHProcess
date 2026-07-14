@@ -1,10 +1,10 @@
 # MBCHProcess Example
 
-This example demonstrates a complete, real-world workflow using `MBCHProcess` to identify the hypergeometric structure of a Feynman integral. We compute the two-loop sunset diagram $H_{\{1,2,3\}}(m, M, M; m^2)$ with $p^2 = m^2$.
+This example demonstrates a complete, real-world workflow using `MBCHProcess` to identify the hypergeometric structure of a Feynman integral. We compute the two-loop sunset diagram $H_{\{1,2,3\}}(m, M, M; m^2)$ with $p^2 = m^2$. Please refer to [this article](https://doi.org/10.1140/epjs/s11734-026-02137-w) for more information.
 
 ## Prerequisites
 
-Ensure that `AMBRE`, `MultivariateResidues`, `MBConicHulls`, `HypExp`, and `MBCHProcess` are loaded into your Mathematica environment. For reproducibility, the loading sequence and the diagram definition are shown below.
+Ensure that `AMBRE`, `MultivariateResidues`, `MBConicHulls`, and `MBCHProcess` are loaded into your Mathematica environment. For reproducibility, the loading sequence and the diagram definition are shown below. While `MultivariateResidues` is a necessary package in order to launch `MBConicHulls`, `AMBRE` is only here to help in the derivation of the MB representation of the integral.
 
 ## Mathematica Workflow
 
@@ -18,7 +18,6 @@ Load the packages in the correct order to ensure all dependencies are met. (Adju
 Get["/path/to/AMBREv2.1.1.m"];
 Get["/path/to/MultivariateResidues.m"];
 Get["/path/to/MBConicHulls.wl"];
-Get["/path/to/HypExp.m"];
 Get["/path/to/MBCHProcess.m"];
 ```
 
