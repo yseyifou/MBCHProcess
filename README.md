@@ -1,2 +1,49 @@
 # MBCHProcess
-A MBConicHulls plugin that provides a processed result in terms of generalized hypergeometric functions.
+
+A Mathematica package for post-processing Mellin-Barnes (MB) representations. It automates the simplification of `MBConicHulls` outputs by identifying and expressing series as known generalized hypergeometric functions (HypergeometricPFQ, AppellF1, Horn, Lauricella A/B/C/D, and Kampe de Feriet).
+
+## Prerequisites
+
+- Wolfram Mathematica (12.0 or later recommended).
+- The `MBConicHulls` package must be installed and loaded **before** `MBCHProcess`, as it relies on `MBConicHulls`EvaluateSeries`.
+
+## Installation
+
+Place the `MBCHProcess.m` file in Mathematica's `$UserBaseDirectory/Applications` folder.
+
+## Usage
+
+Load the package (ensure `MBConicHulls` is loaded first):
+
+```mathematica
+Needs["MBConicHulls`"];
+Needs["MBCHProcess`"];
+```
+
+Process a resolved MB representation using the `ProcessSeries` function:
+
+```mathematica
+ProcessSeries[rep, n, Evaluate :> False, Verbose -> False]
+```
+
+**Arguments and Options:**
+- `rep`: The resolved MB representation.
+- `n`: The series index to process.
+- `Evaluate`: If `True`, returns the result in `InputForm` for numerical evaluation.
+- `Verbose`: If `True`, prints intermediate algebraic simplification steps.
+
+## Methodology
+
+The package sequentially applies algebraic transformations to the series general term:
+1. Factorizes Gamma arguments and applies the Gauss multiplication formula.
+2. Uses the reflection formula to normalize summation indices to positive signs.
+3. Converts Gamma functions to Pochhammer symbols.
+4. Analyzes the index structure to map the series to standard special functions.
+
+## Authors
+
+Yanis Seyifou, Quentin Urzel and Ewen Mahé (supervised by Dr. Samuel Friot, IJCLab, Orsay, France).
+
+## License
+
+This project is licensed under the MIT License.
