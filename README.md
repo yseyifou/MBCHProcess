@@ -5,7 +5,7 @@ A Mathematica package for post-processing Mellin-Barnes (MB) representations. It
 ## Prerequisites
 
 - Wolfram Mathematica (12.0 or later recommended).
-- The `MBConicHulls` package must be installed and loaded **before** `MBCHProcess`, as it relies on `MBConicHulls`EvaluateSeries`.
+- The [`MBConicHulls`](https://github.com/SumitBanikGit/MBConicHulls) package must be installed and loaded **before** `MBCHProcess`, as it relies on `MBConicHulls`EvaluateSeries`.
 
 ## Installation
 
