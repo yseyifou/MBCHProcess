@@ -44,9 +44,9 @@ Options[ProcessSeries] = {Verbose -> False};
 
 Begin["`Private`"]
 
-(* ==========Import confirmation message==========*)
+(* Import confirmation message= *)
 Print["========================================="];
-Print["  MBCHProcess v1.0 "];
+Print["  MBCHProcess v0.1 "];
 Print["  ProcessSeries: Identify special functions from MB \
 representations"];
 Print["  Usage: ProcessSeries[rep, n, Evaluate :> False, \
@@ -54,11 +54,11 @@ Verbose -> True/False]"];
 Print["  Dependencies: MBConicHulls must be loaded first."];
 Print["========================================="];
 
-(* ==========Check that EvaluateSeries is available==========*)
+(* Check that EvaluateSeries is available *)
 If[! MemberQ[Names["MBConicHulls`*"], "MBConicHulls`EvaluateSeries"], 
   Message[ProcessSeries::noeval]];
 
-(* ==========Special functions: display and numerical evaluation==========*)
+(* Special functions: display and numerical evaluation *)
 
 (*KampeDeFeriet*)
 KampeDeFeriet /: 
@@ -230,7 +230,7 @@ HornFunction /:
 HornFunction::nimp = 
   "Numerical evaluation of Horn series `` is not yet implemented.";
 
-(* ==========Auxiliary functions for ProcessSeries==========*)
+(* Functions for ProcessSeries *)
 
 (*Factorization in Gamma*)
 FactorGammaPositive[expr_] := 
@@ -493,7 +493,7 @@ ProcessPrefactor[pre_] := Module[{simpler}, simpler = PowerExpand[pre];
    simpler = Simplify[simpler];
    simpler];
 
-(* ==========Main function ProcessSeries==========*)
+(* Main function : ProcessSeries *)
 ProcessSeries[ResolveSunsetMBRepOut_, SeriesNumber_Integer, 
    Evaluate_ : False, opts : OptionsPattern[]] := 
   Module[{EvaluateSeriesOut, GenericSeriesTerm, IndexList = {}, expr, 
