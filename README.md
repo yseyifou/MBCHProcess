@@ -27,7 +27,7 @@ ProcessSeries[rep, n, Evaluate :> False, Verbose -> False]
 ```
 
 **Arguments and Options:**
-- `rep`: The resolved MB representation (result of `MBConicHulls`ResolveMB`).
+- `rep`: The resolved MB representation (result of `ResolveMB` from `MBConicHulls`).
 - `n`: The series index to process.
 - `Evaluate`: If `True`, returns the result in `InputForm` for numerical evaluation.
 - `Verbose`: If `True`, prints intermediate algebraic simplification steps.
